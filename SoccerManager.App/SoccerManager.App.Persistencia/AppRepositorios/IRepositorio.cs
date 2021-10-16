@@ -81,5 +81,42 @@ namespace SoccerManager.App.Persistencia
 
         Perfil GetPerfil(int? IdPerfil);
         //========================================================================================
+        //CRUD Rama
+
+        IEnumerable<Rama> GetAllRamas(string? Nombre);
+
+        Rama AddRama(Rama rama);
+
+        Rama UpdateRama(Rama rama);
+
+        void DeleteRama(int IdRama);
+
+        Rama GetRama(int? IdRama);
+        //========================================================================================
+            //CRUD Modalidad
+
+        IEnumerable<Modalidad> GetAllModalidades(string? Nombre);
+
+        Modalidad AddModalidad(Modalidad modalidad);
+
+        Modalidad UpdateModalidad(Modalidad modalidad);
+
+        void DeleteModalidad(int IdModalidad);
+
+        Modalidad GetModalidad(int? IdModalidad);
+        //========================================================================================
+        //CRUD Categoria
+
+        IEnumerable<Categoria> GetAllCategorias(string? Nombre);
+
+        Categoria AddCategoria(Categoria categoria);
+
+        Categoria UpdateCategoria(Categoria categoria);
+
+        void DeleteCategoria(int IdCategoria);
+
+        Categoria GetCategoria(int? IdCategoria);
+        //========================================================================================
+
     }
 }

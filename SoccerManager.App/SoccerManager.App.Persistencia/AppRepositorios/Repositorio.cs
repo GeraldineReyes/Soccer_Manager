@@ -17,6 +17,9 @@ namespace SoccerManager.App.Persistencia
         public IEnumerable<Genero> generos { get; set; }
         public IEnumerable<Ciudad> ciudades { get; set; }
         public IEnumerable<Perfil> perfiles { get; set; }
+        public IEnumerable<Rama> ramas { get; set; }
+        public IEnumerable<Modalidad> modalidades { get; set; }
+        public IEnumerable<Categoria> categorias { get; set; }
 
         public Repositorios(AppContext appContext)
         {
@@ -360,6 +363,173 @@ namespace SoccerManager.App.Persistencia
             _appContext.Perfiles.Remove(PerfilEncontrado);
             _appContext.SaveChanges();
         }
+
+//===============================================================================================
+        //CRUD Rama
+        Rama IRepositorios.AddRama(Rama rama)
+        {
+            try
+            {
+                var RamaAdicionado = _appContext.Ramas.Add(rama);  //INSERT en la BD
+                _appContext.SaveChanges();
+                return RamaAdicionado.Entity;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        IEnumerable<Rama> IRepositorios.GetAllRamas(string? Nombre)
+        {
+            if (Nombre != null)
+            {
+                ramas = _appContext.Ramas.Where(p => p.Nombre.Contains(Nombre)); //like sobre la tabla
+            }
+            else
+                ramas = _appContext.Ramas;  //select * from tutor
+            return ramas;
+        }
+
+        Rama IRepositorios.GetRama(int? IdRama)
+        {
+            return _appContext.Ramas.FirstOrDefault(p => p.Id == IdRama);
+        }
+
+        Rama IRepositorios.UpdateRama(Rama rama)
+        {
+            var RamaEncontrado = _appContext.Ramas.FirstOrDefault(p => p.Id == rama.Id);
+            if (RamaEncontrado != null)
+            {
+
+                RamaEncontrado.Nombre = rama.Nombre;
+
+
+
+                _appContext.SaveChanges();
+            }
+            return RamaEncontrado;
+        }
+
+        void IRepositorios.DeleteRama(int IdRama)
+        {
+            var RamaEncontrado = _appContext.Ramas.FirstOrDefault(p => p.Id == IdRama);
+            if (RamaEncontrado == null)
+                return;
+            _appContext.Ramas.Remove(RamaEncontrado);
+            _appContext.SaveChanges();
+        }
+//===============================================================================================
+        //CRUD Modalidad
+        Modalidad IRepositorios.AddModalidad(Modalidad modalidad)
+        {
+            try
+            {
+                var ModalidadAdicionado = _appContext.Modalidades.Add(modalidad);  //INSERT en la BD
+                _appContext.SaveChanges();
+                return ModalidadAdicionado.Entity;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        IEnumerable<Modalidad> IRepositorios.GetAllModalidades(string? Nombre)
+        {
+            if (Nombre != null)
+            {
+                modalidades = _appContext.Modalidades.Where(p => p.Nombre.Contains(Nombre)); //like sobre la tabla
+            }
+            else
+                modalidades = _appContext.Modalidades;  //select * from tutor
+            return modalidades;
+        }
+
+        Modalidad IRepositorios.GetModalidad(int? IdModalidad)
+        {
+            return _appContext.Modalidades.FirstOrDefault(p => p.Id == IdModalidad);
+        }
+
+        Modalidad IRepositorios.UpdateModalidad(Modalidad modalidad)
+        {
+            var ModalidadEncontrado = _appContext.Modalidades.FirstOrDefault(p => p.Id == modalidad.Id);
+            if (ModalidadEncontrado != null)
+            {
+
+                ModalidadEncontrado.Nombre = modalidad.Nombre;
+
+
+
+                _appContext.SaveChanges();
+            }
+            return ModalidadEncontrado;
+        }
+
+        void IRepositorios.DeleteModalidad(int IdModalidad)
+        {
+            var ModalidadEncontrado = _appContext.Modalidades.FirstOrDefault(p => p.Id == IdModalidad);
+            if (ModalidadEncontrado == null)
+                return;
+            _appContext.Modalidades.Remove(ModalidadEncontrado);
+            _appContext.SaveChanges();
+        }
+//===============================================================================================
+        //CRUD Categoria
+        Categoria IRepositorios.AddCategoria(Categoria categoria)
+        {
+            try
+            {
+                var CategoriaAdicionado = _appContext.Categorias.Add(categoria);  //INSERT en la BD
+                _appContext.SaveChanges();
+                return CategoriaAdicionado.Entity;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        IEnumerable<Categoria> IRepositorios.GetAllCategorias(string? Nombre)
+        {
+            if (Nombre != null)
+            {
+                categorias = _appContext.Categorias.Where(p => p.Nombre.Contains(Nombre)); //like sobre la tabla
+            }
+            else
+                categorias = _appContext.Categorias;  //select * from tutor
+            return categorias;
+        }
+
+        Categoria IRepositorios.GetCategoria(int? IdCategoria)
+        {
+            return _appContext.Categorias.FirstOrDefault(p => p.Id == IdCategoria);
+        }
+
+        Categoria IRepositorios.UpdateCategoria(Categoria categoria)
+        {
+            var CategoriaEncontrado = _appContext.Categorias.FirstOrDefault(p => p.Id == categoria.Id);
+            if (CategoriaEncontrado != null)
+            {
+
+                CategoriaEncontrado.Nombre = categoria.Nombre;
+
+
+
+                _appContext.SaveChanges();
+            }
+            return CategoriaEncontrado;
+        }
+
+        void IRepositorios.DeleteCategoria(int IdCategoria)
+        {
+            var CategoriaEncontrado = _appContext.Categorias.FirstOrDefault(p => p.Id == IdCategoria);
+            if (CategoriaEncontrado == null)
+                return;
+            _appContext.Categorias.Remove(CategoriaEncontrado);
+            _appContext.SaveChanges();
+        }
+
 
 
     }

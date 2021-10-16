@@ -13,6 +13,9 @@ namespace SoccerManager.App.Persistencia
         public DbSet<Genero> Generos { get; set; }
         public DbSet<Ciudad> Ciudades { get; set; }
         public DbSet<Perfil> Perfiles { get; set; }
+        public DbSet<Rama> Ramas { get; set; }
+        public DbSet<Modalidad> Modalidades { get; set; }
+        public DbSet<Categoria> Categorias { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {

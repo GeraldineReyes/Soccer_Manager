@@ -10,3 +10,15 @@ C:\SoccerManager\SoccerManager.App\SoccerManager.App.Persistencia\obj\Debug\nets
 C:\SoccerManager\SoccerManager.App\SoccerManager.App.Persistencia\bin\Debug\netstandard2.1\SoccerManager.App.Dominio.dll
 C:\SoccerManager\SoccerManager.App\SoccerManager.App.Persistencia\bin\Debug\netstandard2.1\SoccerManager.App.Dominio.pdb
 C:\SoccerManager\SoccerManager.App\SoccerManager.App.Persistencia\obj\Debug\netstandard2.1\SoccerManager.App.Persistencia.csproj.CopyComplete
+C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Persistencia\bin\Debug\netstandard2.1\SoccerManager.App.Persistencia.deps.json
+C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Persistencia\bin\Debug\netstandard2.1\SoccerManager.App.Persistencia.dll
+C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Persistencia\bin\Debug\netstandard2.1\SoccerManager.App.Persistencia.pdb
+C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Persistencia\bin\Debug\netstandard2.1\SoccerManager.App.Dominio.dll
+C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Persistencia\bin\Debug\netstandard2.1\SoccerManager.App.Dominio.pdb
+C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Persistencia\obj\Debug\netstandard2.1\SoccerManager.App.Persistencia.csprojAssemblyReference.cache
+C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Persistencia\obj\Debug\netstandard2.1\SoccerManager.App.Persistencia.AssemblyInfoInputs.cache
+C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Persistencia\obj\Debug\netstandard2.1\SoccerManager.App.Persistencia.AssemblyInfo.cs
+C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Persistencia\obj\Debug\netstandard2.1\SoccerManager.App.Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Persistencia\obj\Debug\netstandard2.1\SoccerManager.App.Persistencia.csproj.CopyComplete
+C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Persistencia\obj\Debug\netstandard2.1\SoccerManager.App.Persistencia.dll
+C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Persistencia\obj\Debug\netstandard2.1\SoccerManager.App.Persistencia.pdb

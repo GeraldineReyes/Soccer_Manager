@@ -7263,19 +7263,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\reyesgea\\.nuget\\packages\\": {}
+    "C:\\Users\\Familia\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\SoccerManager\\SoccerManager.App\\SoccerManager.App.Persistencia\\SoccerManager.App.Persistencia.csproj",
+      "projectUniqueName": "C:\\Users\\Familia\\Documents\\GitHub\\Soccer_Manager\\SoccerManager.App\\SoccerManager.App.Persistencia\\SoccerManager.App.Persistencia.csproj",
       "projectName": "SoccerManager.App.Persistencia",
-      "projectPath": "C:\\SoccerManager\\SoccerManager.App\\SoccerManager.App.Persistencia\\SoccerManager.App.Persistencia.csproj",
-      "packagesPath": "C:\\Users\\reyesgea\\.nuget\\packages\\",
-      "outputPath": "C:\\SoccerManager\\SoccerManager.App\\SoccerManager.App.Persistencia\\obj\\",
+      "projectPath": "C:\\Users\\Familia\\Documents\\GitHub\\Soccer_Manager\\SoccerManager.App\\SoccerManager.App.Persistencia\\SoccerManager.App.Persistencia.csproj",
+      "packagesPath": "C:\\Users\\Familia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Familia\\Documents\\GitHub\\Soccer_Manager\\SoccerManager.App\\SoccerManager.App.Persistencia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\reyesgea\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Familia\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
@@ -7286,8 +7286,8 @@
       "frameworks": {
         "netstandard2.1": {
           "projectReferences": {
-            "C:\\SoccerManager\\SoccerManager.App\\SoccerManager.App.Dominio\\SoccerManager.App.Dominio.csproj": {
-              "projectPath": "C:\\SoccerManager\\SoccerManager.App\\SoccerManager.App.Dominio\\SoccerManager.App.Dominio.csproj"
+            "C:\\Users\\Familia\\Documents\\GitHub\\Soccer_Manager\\SoccerManager.App\\SoccerManager.App.Dominio\\SoccerManager.App.Dominio.csproj": {
+              "projectPath": "C:\\Users\\Familia\\Documents\\GitHub\\Soccer_Manager\\SoccerManager.App\\SoccerManager.App.Dominio\\SoccerManager.App.Dominio.csproj"
             }
           }
         }
@@ -7337,7 +7337,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\3.1.412\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.412\\RuntimeIdentifierGraph.json"
       }
     }
   }
