@@ -15,13 +15,23 @@ namespace SoccerManager.App.Presentacion
     {
         private readonly IRepositorios _appContext;
         public IEnumerable<Genero> generos { get; set; }
+        public string searchString; 
         public ListGeneroModel()
         {
             this._appContext = new Repositorios(new SoccerManager.App.Persistencia.AppContext());
         }
-        public void OnGet(string filtroBusqueda)
+        public void OnGet()
         {
-            generos = _appContext.GetAllGeneros();
+            generos = _appContext.GetAllGeneros(searchString);
+        }
+        public IActionResult OnPost(string? searchString)
+        {
+            if(!ModelState.IsValid)
+            {
+                return Page();
+            }
+            generos = _appContext.GetAllGeneros(searchString);
+            return Page();
         }
     }
 }

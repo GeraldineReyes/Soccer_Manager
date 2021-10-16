@@ -16,6 +16,15 @@ namespace SoccerManager.App.Presentacion
 
         [BindProperty]
         public Persona persona  { get; set; } 
+        public IEnumerable<Tipo_Documento> tipos_documentos {get; set;} 
+        public IEnumerable<Genero> generos {get; set;} 
+        public IEnumerable<Ciudad> ciudades {get; set;} 
+        public IEnumerable<Perfil> perfiles {get; set;} 
+        public string searchString;
+        public string searchTipo_Documento;
+        public string searchGenero;
+        public string searchCiudad;
+        public string searchPerfil;
 
         public EditPersonaModel()
        {
@@ -24,15 +33,20 @@ namespace SoccerManager.App.Presentacion
      
 
         public IActionResult OnGet(int? personaId)
-        {
+        {                           
+            tipos_documentos =_appContext.GetAllTipos_Documentos(searchTipo_Documento);
+            generos =_appContext.GetAllGeneros(searchGenero);
+            ciudades =_appContext.GetAllCiudades(searchCiudad);
+            perfiles =_appContext.GetAllPerfiles(searchPerfil);
             if (personaId.HasValue)
             {
                 persona = _appContext.GetPersona(personaId.Value);
             }
             else
             {
-                persona = new Persona();
+                persona = new Persona(); 
             }
+
             if (persona == null)
             {
                 return RedirectToPage("./NotFound");
@@ -44,6 +58,10 @@ namespace SoccerManager.App.Presentacion
 
         public IActionResult OnPost()
         {
+            tipos_documentos =_appContext.GetAllTipos_Documentos(searchTipo_Documento);
+            generos =_appContext.GetAllGeneros(searchGenero);
+            ciudades =_appContext.GetAllCiudades(searchCiudad);
+            perfiles =_appContext.GetAllPerfiles(searchPerfil);
             if(!ModelState.IsValid)
             {
                 return Page();

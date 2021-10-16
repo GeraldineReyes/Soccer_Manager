@@ -1,12 +1,14 @@
 using System.Collections.Generic;
+using System.Linq;
 using SoccerManager.App.Dominio;
+
 
 namespace SoccerManager.App.Persistencia
 {
     public interface IRepositorios
     {
         //CRUD PERSONA
-        IEnumerable<Persona> GetAllPersonas();
+        IEnumerable<Persona> GetAllPersonas(string? Nombre);
 
         Persona AddPersona(Persona persona);
 
@@ -18,7 +20,7 @@ namespace SoccerManager.App.Persistencia
         //========================================================================================
         //CRUD CAMPOS
 
-        IEnumerable<Campo> GetAllCampos();
+        IEnumerable<Campo> GetAllCampos(string? Nombre);
 
         Campo AddCampo(Campo campo);
 
@@ -31,7 +33,7 @@ namespace SoccerManager.App.Persistencia
         //========================================================================================
         //CRUD TIPO DOCUMENTO
 
-        IEnumerable<Tipo_Documento> GetAllTipos_Documentos();
+        IEnumerable<Tipo_Documento> GetAllTipos_Documentos(string? Nombre);
 
         Tipo_Documento AddTipo_Documento(Tipo_Documento tipo_documento);
 
@@ -44,7 +46,7 @@ namespace SoccerManager.App.Persistencia
         //========================================================================================
         //CRUD GENERO
 
-        IEnumerable<Genero> GetAllGeneros();
+        IEnumerable<Genero> GetAllGeneros(string? Nombre);
 
         Genero AddGenero(Genero genero);
 
@@ -57,7 +59,7 @@ namespace SoccerManager.App.Persistencia
         //========================================================================================
         //CRUD CIUDAD
 
-        IEnumerable<Ciudad> GetAllCiudades();
+        IEnumerable<Ciudad> GetAllCiudades(string? Nombre);
 
         Ciudad AddCiudad(Ciudad ciudad);
 
@@ -69,7 +71,7 @@ namespace SoccerManager.App.Persistencia
         //========================================================================================
         //CRUD Perfil
 
-        IEnumerable<Perfil> GetAllPerfiles();
+        IEnumerable<Perfil> GetAllPerfiles(string? Nombre);
 
         Perfil AddPerfil(Perfil perfil);
 

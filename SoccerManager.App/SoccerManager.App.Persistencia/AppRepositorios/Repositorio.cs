@@ -10,6 +10,13 @@ namespace SoccerManager.App.Persistencia
     public class Repositorios : IRepositorios
     {
         private readonly AppContext _appContext;
+        public IEnumerable<Persona> personas { get; set; }
+        public IEnumerable<Tipo_Documento> tipos_documentos { get; set; }
+
+        public IEnumerable<Campo> campos { get; set; }
+        public IEnumerable<Genero> generos { get; set; }
+        public IEnumerable<Ciudad> ciudades { get; set; }
+        public IEnumerable<Perfil> perfiles { get; set; }
 
         public Repositorios(AppContext appContext)
         {
@@ -31,9 +38,15 @@ namespace SoccerManager.App.Persistencia
             }
         }
 
-        IEnumerable<Persona> IRepositorios.GetAllPersonas()
+        IEnumerable<Persona> IRepositorios.GetAllPersonas(string? Nombre)
         {
-            return _appContext.Personas;
+            if (Nombre != null)
+            {
+                personas = _appContext.Personas.Where(p => p.Nombre.Contains(Nombre)); //like sobre la tabla
+            }
+            else
+                personas = _appContext.Personas;  //select * from formador
+            return personas;
         }
 
         Persona IRepositorios.GetPersona(int? IdPersona)
@@ -46,16 +59,19 @@ namespace SoccerManager.App.Persistencia
             var PersonaEncontrado = _appContext.Personas.FirstOrDefault(p => p.Id == persona.Id);
             if (PersonaEncontrado != null)
             {
-                
+
                 PersonaEncontrado.Nombre = persona.Nombre;
                 PersonaEncontrado.Apellido = persona.Apellido;
                 PersonaEncontrado.Correo = persona.Correo;
                 PersonaEncontrado.Num_Documento = persona.Num_Documento;
                 PersonaEncontrado.Telefono = persona.Telefono;
                 PersonaEncontrado.Fecha_Nacimiento = persona.Fecha_Nacimiento;
-                //PersonaEncontrado.Tipo_Documento = persona.Tipo_Documento;  
-                              
-                
+                PersonaEncontrado.Tipo_Documento = persona.Tipo_Documento;
+                PersonaEncontrado.Genero = persona.Genero;
+                PersonaEncontrado.Ciudad = persona.Ciudad;
+                PersonaEncontrado.Perfil = persona.Perfil;
+
+
                 _appContext.SaveChanges();
             }
             return PersonaEncontrado;
@@ -85,9 +101,15 @@ namespace SoccerManager.App.Persistencia
             }
         }
 
-        IEnumerable<Campo> IRepositorios.GetAllCampos()
+        IEnumerable<Campo> IRepositorios.GetAllCampos(string? Nombre)
         {
-            return _appContext.Campos;
+            if (Nombre != null)
+            {
+                campos = _appContext.Campos.Where(p => p.Nombre.Contains(Nombre)); //like sobre la tabla
+            }
+            else
+                campos = _appContext.Campos;  //select * from tutor
+            return campos;
         }
 
         Campo IRepositorios.GetCampo(int? IdCampo)
@@ -100,7 +122,7 @@ namespace SoccerManager.App.Persistencia
             var CampoEncontrado = _appContext.Campos.FirstOrDefault(p => p.Id == campo.Id);
             if (CampoEncontrado != null)
             {
-                
+
                 CampoEncontrado.Nombre = campo.Nombre;
                 CampoEncontrado.Fecha_Horario_Inicial = campo.Fecha_Horario_Inicial;
                 CampoEncontrado.Fecha_Horario_Final = campo.Fecha_Horario_Final;
@@ -134,9 +156,15 @@ namespace SoccerManager.App.Persistencia
             }
         }
 
-        IEnumerable<Tipo_Documento> IRepositorios.GetAllTipos_Documentos()
+        IEnumerable<Tipo_Documento> IRepositorios.GetAllTipos_Documentos(string? Nombre)
         {
-            return _appContext.Tipos_Documentos;
+            if (Nombre != null)
+            {
+                tipos_documentos = _appContext.Tipos_Documentos.Where(p => p.Nombre.Contains(Nombre)); //like sobre la tabla
+            }
+            else
+                tipos_documentos = _appContext.Tipos_Documentos;  //select * from equipo
+            return tipos_documentos;
         }
 
         Tipo_Documento IRepositorios.GetTipo_Documento(int? IdTipo_Documento)
@@ -149,10 +177,10 @@ namespace SoccerManager.App.Persistencia
             var Tipo_DocumentoEncontrado = _appContext.Tipos_Documentos.FirstOrDefault(p => p.Id == tipo_documento.Id);
             if (Tipo_DocumentoEncontrado != null)
             {
-                
+
                 Tipo_DocumentoEncontrado.Nombre = tipo_documento.Nombre;
                 Tipo_DocumentoEncontrado.Abreviatura = tipo_documento.Abreviatura;
-                
+
 
                 _appContext.SaveChanges();
             }
@@ -183,9 +211,15 @@ namespace SoccerManager.App.Persistencia
             }
         }
 
-        IEnumerable<Genero> IRepositorios.GetAllGeneros()
+        IEnumerable<Genero> IRepositorios.GetAllGeneros(string? Nombre)
         {
-            return _appContext.Generos;
+            if (Nombre != null)
+            {
+                generos = _appContext.Generos.Where(p => p.Nombre.Contains(Nombre)); //like sobre la tabla
+            }
+            else
+                generos = _appContext.Generos;  //select * from tutor
+            return generos;
         }
 
         Genero IRepositorios.GetGenero(int? IdGenero)
@@ -198,10 +232,10 @@ namespace SoccerManager.App.Persistencia
             var GeneroEncontrado = _appContext.Generos.FirstOrDefault(p => p.Id == genero.Id);
             if (GeneroEncontrado != null)
             {
-                
+
                 GeneroEncontrado.Nombre = genero.Nombre;
                 GeneroEncontrado.Abreviatura = genero.Abreviatura;
-                
+
 
                 _appContext.SaveChanges();
             }
@@ -232,9 +266,15 @@ namespace SoccerManager.App.Persistencia
             }
         }
 
-        IEnumerable<Ciudad> IRepositorios.GetAllCiudades()
+        IEnumerable<Ciudad> IRepositorios.GetAllCiudades(string? Nombre)
         {
-            return _appContext.Ciudades;
+            if (Nombre != null)
+            {
+                ciudades = _appContext.Ciudades.Where(p => p.Nombre.Contains(Nombre)); //like sobre la tabla
+            }
+            else
+                ciudades = _appContext.Ciudades;  //select * from tutor
+            return ciudades;
         }
 
         Ciudad IRepositorios.GetCiudad(int? IdCiudad)
@@ -247,10 +287,10 @@ namespace SoccerManager.App.Persistencia
             var CiudadEncontrado = _appContext.Ciudades.FirstOrDefault(p => p.Id == ciudad.Id);
             if (CiudadEncontrado != null)
             {
-                
+
                 CiudadEncontrado.Nombre = ciudad.Nombre;
-                
-                
+
+
 
                 _appContext.SaveChanges();
             }
@@ -281,9 +321,15 @@ namespace SoccerManager.App.Persistencia
             }
         }
 
-        IEnumerable<Perfil> IRepositorios.GetAllPerfiles()
+        IEnumerable<Perfil> IRepositorios.GetAllPerfiles(string? Nombre)
         {
-            return _appContext.Perfiles;
+            if (Nombre != null)
+            {
+                perfiles = _appContext.Perfiles.Where(p => p.Nombre.Contains(Nombre)); //like sobre la tabla
+            }
+            else
+                perfiles = _appContext.Perfiles;  //select * from tutor
+            return perfiles;
         }
 
         Perfil IRepositorios.GetPerfil(int? IdPerfil)
@@ -296,10 +342,10 @@ namespace SoccerManager.App.Persistencia
             var PerfilEncontrado = _appContext.Perfiles.FirstOrDefault(p => p.Id == perfil.Id);
             if (PerfilEncontrado != null)
             {
-                
+
                 PerfilEncontrado.Nombre = perfil.Nombre;
-                
-                
+
+
 
                 _appContext.SaveChanges();
             }

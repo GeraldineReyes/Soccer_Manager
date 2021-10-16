@@ -15,13 +15,23 @@ namespace SoccerManager.App.Presentacion
     {
         private readonly IRepositorios _appContext;
         public IEnumerable<Ciudad> ciudades { get; set; }
+        public string searchString; 
         public ListCiudadModel()
         {
             this._appContext = new Repositorios(new SoccerManager.App.Persistencia.AppContext());
         }
-        public void OnGet(string filtroBusqueda)
+        public void OnGet()
         {
-            ciudades = _appContext.GetAllCiudades();
+            ciudades = _appContext.GetAllCiudades(searchString);
+        }
+        public IActionResult OnPost(string? searchString)
+        {
+            if(!ModelState.IsValid)
+            {
+                return Page();
+            }
+            ciudades = _appContext.GetAllCiudades(searchString);
+            return Page();
         }
     }
 }

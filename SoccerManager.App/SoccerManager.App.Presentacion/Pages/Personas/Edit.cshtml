@@ -3,6 +3,11 @@
 
 @{
     int personaId = Model.persona.Id;
+    int tipo_documentoId = Model.persona.Tipo_Documento;
+    int generoId = Model.persona.Genero;
+    int ciudadId = Model.persona.Ciudad;
+    int perfilId = Model.persona.Perfil;
+
 }
 
 <h2><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
@@ -21,11 +26,7 @@
         <input asp-for="persona.Apellido" class="form-control">
         <span class="text-danger" asp-validation-for="persona.Apellido"></span>
     </div>
-    <div class="form-group">
-        <label asp-for="persona.Num_Documento"></label>
-        <input asp-for="persona.Num_Documento" class="form-control">
-        <span class="text-danger" asp-validation-for="persona.Num_Documento"></span>
-    </div>
+    
     <div class="form-group">
         <label asp-for="persona.Correo"></label>
         <input asp-for="persona.Correo" class="form-control">
@@ -41,6 +42,72 @@
         <input asp-for="persona.Fecha_Nacimiento" class="form-control">
         <span class="text-danger" asp-validation-for="persona.Fecha_Nacimiento"></span>
     </div>
+    <div class="form-group">
+        <label asp-for="persona.Tipo_Documento"></label>
+        <select class="form-select" name="persona.Tipo_Documento">
+            <option selected  value=0>Seleccionar opcion</option>
+            @foreach(var elemento in Model.tipos_documentos){
+               if (elemento.Id == tipo_documentoId) {
+                  <option value="@elemento.Id" selected> @elemento.Abreviatura @elemento.Nombre </option> 
+                }
+               else {
+                  <option value="@elemento.Id"> @elemento.Abreviatura @elemento.Nombre </option>
+               }
+            }
+        </select>
+        <span class="text-danger" asp-validation-for="persona.Tipo_Documento"></span>
+    </div> 
+    <div class="form-group">
+        <label asp-for="persona.Num_Documento"></label>
+        <input asp-for="persona.Num_Documento" class="form-control">
+        <span class="text-danger" asp-validation-for="persona.Num_Documento"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="persona.Genero"></label>
+        <select class="form-select" name="persona.Genero">
+            <option selected  value=0>Seleccionar opcion</option>
+            @foreach(var elemento in Model.generos){
+               if (elemento.Id == generoId) {
+                  <option value="@elemento.Id" selected> @elemento.Nombre @elemento.Abreviatura </option> 
+                }
+               else {
+                  <option value="@elemento.Id"> @elemento.Nombre @elemento.Abreviatura </option>
+               }
+            }
+        </select>
+        <span class="text-danger" asp-validation-for="persona.Genero"></span>
+    </div> 
+    <div class="form-group">
+        <label asp-for="persona.Ciudad"></label>
+        <select class="form-select" name="persona.Ciudad">
+            <option selected  value=0>Seleccionar opcion</option>
+            @foreach(var elemento in Model.ciudades){
+               if (elemento.Id == ciudadId) {
+                  <option value="@elemento.Id" selected> @elemento.Nombre </option> 
+                }
+               else {
+                  <option value="@elemento.Id"> @elemento.Nombre </option>
+               }
+            }
+        </select>
+        <span class="text-danger" asp-validation-for="persona.Ciudad"></span>
+    </div> 
+    <div class="form-group">
+        <label asp-for="persona.Perfil"></label>
+        <select class="form-select" name="persona.Perfil">
+            <option selected  value=0>Seleccionar opcion</option>
+            @foreach(var elemento in Model.perfiles){
+               if (elemento.Id == perfilId) {
+                  <option value="@elemento.Id" selected> @elemento.Nombre</option> 
+                }
+               else {
+                  <option value="@elemento.Id"> @elemento.Nombre </option>
+               }
+            }
+        </select>
+        <span class="text-danger" asp-validation-for="persona.Perfil"></span>
+    </div>
+
 
     <button type="submit" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
   <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>

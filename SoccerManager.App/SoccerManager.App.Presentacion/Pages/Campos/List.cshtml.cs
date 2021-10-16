@@ -15,13 +15,23 @@ namespace SoccerManager.App.Presentacion
     {
         private readonly IRepositorios _appContext;
         public IEnumerable<Campo> campos { get; set; }
+        public string searchString; 
         public ListCampoModel()
         {
             this._appContext = new Repositorios(new SoccerManager.App.Persistencia.AppContext());
         }
-        public void OnGet(string filtroBusqueda)
+        public void OnGet()
         {
-            campos = _appContext.GetAllCampos();
+            campos = _appContext.GetAllCampos(searchString);
+        }
+        public IActionResult OnPost(string? searchString)
+        {
+            if(!ModelState.IsValid)
+            {
+                return Page();
+            }
+            campos = _appContext.GetAllCampos(searchString);
+            return Page();
         }
     }
 }

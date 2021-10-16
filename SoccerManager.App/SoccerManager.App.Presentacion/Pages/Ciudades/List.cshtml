@@ -1,6 +1,7 @@
 ﻿@page
 @model SoccerManager.App.Presentacion.ListCiudadModel
 @{
+    var searchString = Model.searchString;
 }
 <h1><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
         class="bi bi-file-earmark-person-fill" viewBox="0 0 16 16">
@@ -13,7 +14,17 @@
         background-color: lightblue;
     }
 </style>
+<p>
+    @Html.ActionLink("Listar Todo", "./List")
+</p>
 
+@using (Html.BeginForm())
+{
+    <p>
+        Buscar por Nombre: @Html.TextBox("SearchString")  
+        <input type="submit" value="Search" />
+    </p>
+}
 <table style="width: 100%" class="tableCiudad">
     <tr>
         <th>

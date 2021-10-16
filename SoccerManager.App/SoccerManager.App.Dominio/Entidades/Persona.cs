@@ -11,10 +11,10 @@ namespace SoccerManager.App.Dominio
         public string Telefono { get; set;}
         public DateTime Fecha_Nacimiento { get; set; }
         
-        public Tipo_Documento tipo_documento { get; set;}
-        public Genero genero { get; set; }        
-        public Ciudad ciudad { get; set;} 
-        public Perfil perfil { get; set;}         
+        public int Tipo_Documento { get; set;}
+        public int Genero { get; set; }        
+        public int Ciudad { get; set;} 
+        public int Perfil { get; set;}         
 
     }
 }

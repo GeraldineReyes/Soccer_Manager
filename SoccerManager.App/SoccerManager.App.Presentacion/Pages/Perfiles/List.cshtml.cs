@@ -15,13 +15,23 @@ namespace SoccerManager.App.Presentacion
     {
         private readonly IRepositorios _appContext;
         public IEnumerable<Perfil> perfiles { get; set; }
+        public string searchString; 
         public ListPerfilModel()
         {
             this._appContext = new Repositorios(new SoccerManager.App.Persistencia.AppContext());
         }
-        public void OnGet(string filtroBusqueda)
+        public void OnGet()
         {
-            perfiles = _appContext.GetAllPerfiles();
+            perfiles = _appContext.GetAllPerfiles(searchString);
+        }
+        public IActionResult OnPost(string? searchString)
+        {
+            if(!ModelState.IsValid)
+            {
+                return Page();
+            }
+            perfiles = _appContext.GetAllPerfiles(searchString);
+            return Page();
         }
     }
 }
