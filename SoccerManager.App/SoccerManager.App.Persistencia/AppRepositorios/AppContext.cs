@@ -16,6 +16,10 @@ namespace SoccerManager.App.Persistencia
         public DbSet<Rama> Ramas { get; set; }
         public DbSet<Modalidad> Modalidades { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Arbitro> Arbitros { get; set; }
+        public DbSet<Campeonato> Campeonatos { get; set; }
+        public DbSet<Equipo_Jugador> Equipo_Jugadores { get; set; }
+        public DbSet<Equipo_Partido> Equipo_Partidos { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {

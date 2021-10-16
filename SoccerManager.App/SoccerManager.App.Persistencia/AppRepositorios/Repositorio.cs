@@ -20,6 +20,10 @@ namespace SoccerManager.App.Persistencia
         public IEnumerable<Rama> ramas { get; set; }
         public IEnumerable<Modalidad> modalidades { get; set; }
         public IEnumerable<Categoria> categorias { get; set; }
+        public IEnumerable<Arbitro> arbitros { get; set; }
+        public IEnumerable<Campeonato> campeonatos { get; set; }
+        public IEnumerable<Equipo_Jugador> equipo_Jugadores { get; set; }
+        public IEnumerable<Equipo_Partido> equipo_Partidos { get; set; }
 
         public Repositorios(AppContext appContext)
         {
@@ -530,7 +534,236 @@ namespace SoccerManager.App.Persistencia
             _appContext.SaveChanges();
         }
 
+//===============================================================================================
+        //CRUD Arbitro
+        Arbitro IRepositorios.AddArbitro(Arbitro arbitro)
+        {
+            try
+            {
+                var ArbitroAdicionado = _appContext.Arbitros.Add(arbitro);  //INSERT en la BD
+                _appContext.SaveChanges();
+                return ArbitroAdicionado.Entity;
+            }
+            catch
+            {
+                throw;
+            }
+        }
 
+//        IEnumerable<Arbitro> IRepositorios.GetAllArbitros(string? Nombre)
+ //       {
+//            if (Nombre != null)
+ //           {
+ //               arbitros = _appContext.Arbitros.Where(p => p.Nombre.Contains(Nombre)); //like sobre la tabla
+ //           }
+ //           else
+ //               arbitros = _appContext.Arbitros;  //select * from tutor
+ //           return arbitros;
+ //       }
+
+        Arbitro IRepositorios.GetArbitro(int? IdArbitro)
+        {
+            return _appContext.Arbitros.FirstOrDefault(p => p.Id == IdArbitro);
+        }
+
+        Arbitro IRepositorios.UpdateArbitro(Arbitro arbitro)
+        {
+            var ArbitroEncontrado = _appContext.Arbitros.FirstOrDefault(p => p.Id == arbitro.Id);
+            if (ArbitroEncontrado != null)
+            {
+
+                ArbitroEncontrado.Certificado = arbitro.Certificado;
+
+
+
+                _appContext.SaveChanges();
+            }
+            return ArbitroEncontrado;
+        }
+
+        void IRepositorios.DeleteArbitro(int IdArbitro)
+        {
+            var ArbitroEncontrado = _appContext.Arbitros.FirstOrDefault(p => p.Id == IdArbitro);
+            if (ArbitroEncontrado == null)
+                return;
+            _appContext.Arbitros.Remove(ArbitroEncontrado);
+            _appContext.SaveChanges();
+        }
+//===============================================================================================
+        //CRUD Campeonato
+        Campeonato IRepositorios.AddCampeonato(Campeonato campeonato)
+        {
+            try
+            {
+                var CampeonatoAdicionado = _appContext.Campeonatos.Add(campeonato);  //INSERT en la BD
+                _appContext.SaveChanges();
+                return CampeonatoAdicionado.Entity;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        IEnumerable<Campeonato> IRepositorios.GetAllCampeonatos(string? Nombre)
+        {
+            if (Nombre != null)
+            {
+                campeonatos = _appContext.Campeonatos.Where(p => p.Nombre.Contains(Nombre)); //like sobre la tabla
+            }
+            else
+                campeonatos = _appContext.Campeonatos;  //select * from tutor
+            return campeonatos;
+        }
+
+        Campeonato IRepositorios.GetCampeonato(int? IdCampeonato)
+        {
+            return _appContext.Campeonatos.FirstOrDefault(p => p.Id == IdCampeonato);
+        }
+
+        Campeonato IRepositorios.UpdateCampeonato(Campeonato campeonato)
+        {
+            var CampeonatoEncontrado = _appContext.Campeonatos.FirstOrDefault(p => p.Id == campeonato.Id);
+            if (CampeonatoEncontrado != null)
+            {
+
+                CampeonatoEncontrado.Nombre = campeonato.Nombre;
+                CampeonatoEncontrado.Fecha_Inicial = campeonato.Fecha_Inicial;
+                CampeonatoEncontrado.Fecha_Fin = campeonato.Fecha_Fin;
+                CampeonatoEncontrado.Reglamento = campeonato.Reglamento;
+                CampeonatoEncontrado.Numero_Eliminatorias = campeonato.Numero_Eliminatorias;
+                CampeonatoEncontrado.Numero_Equipos_Premiados = campeonato.Numero_Equipos_Premiados;
+                CampeonatoEncontrado.Estado = campeonato.Estado;
+                CampeonatoEncontrado.Numero_Equipos = campeonato.Numero_Equipos;
+
+
+
+                _appContext.SaveChanges();
+            }
+            return CampeonatoEncontrado;
+        }
+
+        void IRepositorios.DeleteCampeonato(int IdCampeonato)
+        {
+            var CampeonatoEncontrado = _appContext.Campeonatos.FirstOrDefault(p => p.Id == IdCampeonato);
+            if (CampeonatoEncontrado == null)
+                return;
+            _appContext.Campeonatos.Remove(CampeonatoEncontrado);
+            _appContext.SaveChanges();
+        }
+
+//===============================================================================================
+        //CRUD Equipo_Jugador
+        Equipo_Jugador IRepositorios.AddEquipo_Jugador(Equipo_Jugador equipo_Jugador)
+        {
+            try
+            {
+                var Equipo_JugadorAdicionado = _appContext.Equipo_Jugadores.Add(equipo_Jugador);  //INSERT en la BD
+                _appContext.SaveChanges();
+                return Equipo_JugadorAdicionado.Entity;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        IEnumerable<Equipo_Jugador> IRepositorios.GetAllEquipo_Jugadores(string? Dorsal)
+        {
+            if (Dorsal != null)
+            {
+                equipo_Jugadores = _appContext.Equipo_Jugadores.Where(p => p.Dorsal.Contains(Dorsal)); //like sobre la tabla
+            }
+            else
+                equipo_Jugadores = _appContext.Equipo_Jugadores;  //select * from tutor
+            return equipo_Jugadores;
+        }
+
+        Equipo_Jugador IRepositorios.GetEquipo_Jugador(int? IdEquipo_Jugador)
+        {
+            return _appContext.Equipo_Jugadores.FirstOrDefault(p => p.Id == IdEquipo_Jugador);
+        }
+
+        Equipo_Jugador IRepositorios.UpdateEquipo_Jugador(Equipo_Jugador equipo_Jugador)
+        {
+            var Equipo_JugadorEncontrado = _appContext.Equipo_Jugadores.FirstOrDefault(p => p.Id == equipo_Jugador.Id);
+            if (Equipo_JugadorEncontrado != null)
+            {
+
+                Equipo_JugadorEncontrado.Dorsal = equipo_Jugador.Dorsal;
+                Equipo_JugadorEncontrado.Posicion = equipo_Jugador.Posicion;
+                Equipo_JugadorEncontrado.Abreviatura_Posicion = equipo_Jugador.Abreviatura_Posicion;
+
+
+
+                _appContext.SaveChanges();
+            }
+            return Equipo_JugadorEncontrado;
+        }
+
+        void IRepositorios.DeleteEquipo_Jugador(int IdEquipo_Jugador)
+        {
+            var Equipo_JugadorEncontrado = _appContext.Equipo_Jugadores.FirstOrDefault(p => p.Id == IdEquipo_Jugador);
+            if (Equipo_JugadorEncontrado == null)
+                return;
+            _appContext.Equipo_Jugadores.Remove(Equipo_JugadorEncontrado);
+            _appContext.SaveChanges();
+        }
+//===============================================================================================
+        //CRUD Equipo_Partido
+        Equipo_Partido IRepositorios.AddEquipo_Partido(Equipo_Partido equipo_Partido)
+        {
+            try
+            {
+                var Equipo_PartidoAdicionado = _appContext.Equipo_Partidos.Add(equipo_Partido);  //INSERT en la BD
+                _appContext.SaveChanges();
+                return Equipo_PartidoAdicionado.Entity;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        IEnumerable<Equipo_Partido> IRepositorios.GetAllEquipo_Partidos(string? Equipo_Local)
+        {
+            if (Equipo_Local != null)
+            {
+                equipo_Partidos = _appContext.Equipo_Partidos.Where(p => p.Equipo_Local.Contains(Equipo_Local)); //like sobre la tabla
+            }
+            else
+                equipo_Partidos = _appContext.Equipo_Partidos;  //select * from tutor
+            return equipo_Partidos;
+        }
+
+        Equipo_Partido IRepositorios.GetEquipo_Partido(int? IdEquipo_Partido)
+        {
+            return _appContext.Equipo_Partidos.FirstOrDefault(p => p.Id == IdEquipo_Partido);
+        }
+
+        Equipo_Partido IRepositorios.UpdateEquipo_Partido(Equipo_Partido equipo_Partido)
+        {
+            var Equipo_PartidoEncontrado = _appContext.Equipo_Partidos.FirstOrDefault(p => p.Id == equipo_Partido.Id);
+            if (Equipo_PartidoEncontrado != null)
+            {
+
+                Equipo_PartidoEncontrado.Equipo_Local = equipo_Partido.Equipo_Local;
+
+
+
+                _appContext.SaveChanges();
+            }
+            return Equipo_PartidoEncontrado;
+        }
+
+        void IRepositorios.DeleteEquipo_Partido(int IdEquipo_Partido)
+        {
+            var Equipo_PartidoEncontrado = _appContext.Equipo_Partidos.FirstOrDefault(p => p.Id == IdEquipo_Partido);
+            if (Equipo_PartidoEncontrado == null)
+                return;
+            _appContext.Equipo_Partidos.Remove(Equipo_PartidoEncontrado);
+            _appContext.SaveChanges();
+        }
 
     }
 }

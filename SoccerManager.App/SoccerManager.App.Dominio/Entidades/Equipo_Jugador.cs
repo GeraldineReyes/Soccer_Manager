@@ -3,6 +3,7 @@ namespace SoccerManager.App.Dominio
 {
     public class Equipo_Jugador
     {
+        public int Id { get; set; }
         public string Dorsal { get; set; }
         public string Posicion { get; set; }
         public string Abreviatura_Posicion { get; set; }

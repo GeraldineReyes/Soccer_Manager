@@ -117,6 +117,55 @@ namespace SoccerManager.App.Persistencia
 
         Categoria GetCategoria(int? IdCategoria);
         //========================================================================================
+       //CRUD Arbitro
+
+ //       IEnumerable<Arbitro> GetAllArbitros(string? Nombre);  implementar buscar
+
+        Arbitro AddArbitro(Arbitro arbitro);
+
+        Arbitro UpdateArbitro(Arbitro arbitro);
+
+        void DeleteArbitro(int IdArbitro);
+
+        Arbitro GetArbitro(int? IdArbitro);
+        //========================================================================================
+        //CRUD Campeonato
+
+        IEnumerable<Campeonato> GetAllCampeonatos(string? Nombre);
+
+        Campeonato AddCampeonato(Campeonato campeonato);
+
+        Campeonato UpdateCampeonato(Campeonato campeonato);
+
+        void DeleteCampeonato(int IdCampeonato);
+
+        Campeonato GetCampeonato(int? IdCampeonato);
+        //========================================================================================
+        //CRUD Equipo_Jugador
+
+        IEnumerable<Equipo_Jugador> GetAllEquipo_Jugadores(string? Dorsal);
+
+        Equipo_Jugador AddEquipo_Jugador(Equipo_Jugador equipo_Jugador);
+
+        Equipo_Jugador UpdateEquipo_Jugador(Equipo_Jugador equipo_Jugador);
+
+        void DeleteEquipo_Jugador(int IdEquipo_Jugador);
+
+        Equipo_Jugador GetEquipo_Jugador(int? IdEquipo_Jugador);
+        //========================================================================================
+        //CRUD Equipo_Partido
+
+        IEnumerable<Equipo_Partido> GetAllEquipo_Partidos(string? Equipo_Local);
+
+        Equipo_Partido AddEquipo_Partido(Equipo_Partido equipo_Partido);
+
+        Equipo_Partido UpdateEquipo_Partido(Equipo_Partido equipo_Partido);
+
+        void DeleteEquipo_Partido(int IdEquipo_Partido);
+
+        Equipo_Partido GetEquipo_Partido(int? IdEquipo_Partido);
+        //========================================================================================
+
 
     }
 }
