@@ -21,6 +21,8 @@ namespace SoccerManager.App.Persistencia
         public DbSet<Equipo_Jugador> Equipo_Jugadores { get; set; }
         public DbSet<Equipo_Partido> Equipo_Partidos { get; set; }
         public DbSet<Equipo> Equipos { get; set; }
+        public DbSet<Jugador> Jugadores { get; set; }
+        public DbSet<Partido_Jugador> Partido_Jugadores { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {

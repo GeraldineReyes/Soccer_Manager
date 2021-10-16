@@ -18,7 +18,7 @@ namespace SoccerManager.App.Persistencia
         
         Persona GetPersona(int? IdPersona);
         //========================================================================================
-        //CRUD CAMPOS
+        //CRUD CAMPO
 
         IEnumerable<Campo> GetAllCampos(string? Nombre);
 
@@ -93,7 +93,7 @@ namespace SoccerManager.App.Persistencia
 
         Rama GetRama(int? IdRama);
         //========================================================================================
-            //CRUD Modalidad
+        //CRUD Modalidad
 
         IEnumerable<Modalidad> GetAllModalidades(string? Nombre);
 
@@ -179,6 +179,32 @@ namespace SoccerManager.App.Persistencia
         void DeleteEquipo(int IdEquipo);
 
         Equipo GetEquipo(int? IdEquipo);
+        //========================================================================================
+
+        //CRUD Jugador
+
+//        IEnumerable<Jugador> GetAllJugadores(string? Nombre);
+
+        Jugador AddJugador(Jugador jugador);
+
+        Jugador UpdateJugador(Jugador jugador);
+
+        void DeleteJugador(int IdJugador);
+
+        Jugador GetJugador(int? IdJugador);
+        //========================================================================================
+
+       //CRUD Partido_Jugador
+
+//        IEnumerable<Partido_Jugador> GetAllPartido_Jugadores(string? Nombre);
+
+        Partido_Jugador AddPartido_Jugador(Partido_Jugador partido_Jugador);
+
+        Partido_Jugador UpdatePartido_Jugador(Partido_Jugador partido_Jugador);
+
+        void DeletePartido_Jugador(int IdPartido_Jugador);
+
+        Partido_Jugador GetPartido_Jugador(int? IdPartido_Jugador);
         //========================================================================================
 
 
