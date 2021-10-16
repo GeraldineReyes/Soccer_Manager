@@ -24,6 +24,7 @@ namespace SoccerManager.App.Persistencia
         public IEnumerable<Campeonato> campeonatos { get; set; }
         public IEnumerable<Equipo_Jugador> equipo_Jugadores { get; set; }
         public IEnumerable<Equipo_Partido> equipo_Partidos { get; set; }
+        public IEnumerable<Equipo> equipos { get; set; }
 
         public Repositorios(AppContext appContext)
         {
@@ -748,6 +749,9 @@ namespace SoccerManager.App.Persistencia
             {
 
                 Equipo_PartidoEncontrado.Equipo_Local = equipo_Partido.Equipo_Local;
+                Equipo_PartidoEncontrado.Equipo_Visitante = equipo_Partido.Equipo_Visitante;
+                Equipo_PartidoEncontrado.Fecha = equipo_Partido.Fecha;
+                Equipo_PartidoEncontrado.Hora = equipo_Partido.Hora;
 
 
 
@@ -764,6 +768,70 @@ namespace SoccerManager.App.Persistencia
             _appContext.Equipo_Partidos.Remove(Equipo_PartidoEncontrado);
             _appContext.SaveChanges();
         }
+//===============================================================================================
+        //CRUD Equipo
+        Equipo IRepositorios.AddEquipo(Equipo equipo)
+        {
+            try
+            {
+                var EquipoAdicionado = _appContext.Equipos.Add(equipo);  //INSERT en la BD
+                _appContext.SaveChanges();
+                return EquipoAdicionado.Entity;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        IEnumerable<Equipo> IRepositorios.GetAllEquipos(string? Nombre)
+        {
+            if (Nombre != null)
+            {
+                equipos = _appContext.Equipos.Where(p => p.Nombre.Contains(Nombre)); //like sobre la tabla
+            }
+            else
+                equipos = _appContext.Equipos;  //select * from tutor
+            return equipos;
+        }
+
+        Equipo IRepositorios.GetEquipo(int? IdEquipo)
+        {
+            return _appContext.Equipos.FirstOrDefault(p => p.Id == IdEquipo);
+        }
+
+        Equipo IRepositorios.UpdateEquipo(Equipo equipo)
+        {
+            var EquipoEncontrado = _appContext.Equipos.FirstOrDefault(p => p.Id == equipo.Id);
+            if (EquipoEncontrado != null)
+            {
+
+                EquipoEncontrado.Nombre = equipo.Nombre;
+                EquipoEncontrado.Numero_Jugadores = equipo.Numero_Jugadores;
+                EquipoEncontrado.Estado = equipo.Estado;
+                EquipoEncontrado.Color_Uniforme_Local = equipo.Color_Uniforme_Local;
+                EquipoEncontrado.Color_Uniforme_Visitante = equipo.Color_Uniforme_Visitante;
+                EquipoEncontrado.Contacto = equipo.Contacto;
+                EquipoEncontrado.Telefono = equipo.Telefono;
+                EquipoEncontrado.Email = equipo.Email;
+
+
+
+                _appContext.SaveChanges();
+            }
+            return EquipoEncontrado;
+        }
+
+        void IRepositorios.DeleteEquipo(int IdEquipo)
+        {
+            var EquipoEncontrado = _appContext.Equipos.FirstOrDefault(p => p.Id == IdEquipo);
+            if (EquipoEncontrado == null)
+                return;
+            _appContext.Equipos.Remove(EquipoEncontrado);
+            _appContext.SaveChanges();
+        }
+
+
 
     }
 }

@@ -128,6 +128,7 @@ namespace SoccerManager.App.Persistencia
         void DeleteArbitro(int IdArbitro);
 
         Arbitro GetArbitro(int? IdArbitro);
+
         //========================================================================================
         //CRUD Campeonato
 
@@ -140,6 +141,7 @@ namespace SoccerManager.App.Persistencia
         void DeleteCampeonato(int IdCampeonato);
 
         Campeonato GetCampeonato(int? IdCampeonato);
+
         //========================================================================================
         //CRUD Equipo_Jugador
 
@@ -152,6 +154,7 @@ namespace SoccerManager.App.Persistencia
         void DeleteEquipo_Jugador(int IdEquipo_Jugador);
 
         Equipo_Jugador GetEquipo_Jugador(int? IdEquipo_Jugador);
+
         //========================================================================================
         //CRUD Equipo_Partido
 
@@ -165,6 +168,19 @@ namespace SoccerManager.App.Persistencia
 
         Equipo_Partido GetEquipo_Partido(int? IdEquipo_Partido);
         //========================================================================================
+        //CRUD Equipo
+
+        IEnumerable<Equipo> GetAllEquipos(string? Nombre);
+
+        Equipo AddEquipo(Equipo equipo);
+
+        Equipo UpdateEquipo(Equipo equipo);
+
+        void DeleteEquipo(int IdEquipo);
+
+        Equipo GetEquipo(int? IdEquipo);
+        //========================================================================================
+
 
 
     }
