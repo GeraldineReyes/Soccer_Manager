@@ -133,12 +133,12 @@ namespace SoccerManager.App.Persistencia.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-<<<<<<< HEAD
-=======
+
+
                     b.Property<int>("Campo")
                         .HasColumnType("int");
 
->>>>>>> 8764ddfd8301b48523872832e1e7eae0671f43dd
+
                     b.Property<int>("Cantidad_Canchas")
                         .HasColumnType("int");
 
@@ -157,7 +157,7 @@ namespace SoccerManager.App.Persistencia.Migrations
                     b.Property<string>("Telefono")
                         .HasColumnType("nvarchar(max)");
 
-<<<<<<< HEAD
+
                     b.Property<int?>("campoId")
                         .HasColumnType("int");
 
@@ -181,11 +181,11 @@ namespace SoccerManager.App.Persistencia.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categorias");
-=======
+
                     b.HasKey("Id");
 
                     b.ToTable("Canchas");
->>>>>>> 8764ddfd8301b48523872832e1e7eae0671f43dd
+
                 });
 
             modelBuilder.Entity("SoccerManager.App.Dominio.Ciudad", b =>

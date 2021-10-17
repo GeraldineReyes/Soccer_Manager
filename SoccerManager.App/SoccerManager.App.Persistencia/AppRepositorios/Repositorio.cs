@@ -17,7 +17,7 @@ namespace SoccerManager.App.Persistencia
         public IEnumerable<Genero> generos { get; set; }
         public IEnumerable<Ciudad> ciudades { get; set; }
         public IEnumerable<Perfil> perfiles { get; set; }
-<<<<<<< Updated upstream
+
         public IEnumerable<Rama> ramas { get; set; }
         public IEnumerable<Modalidad> modalidades { get; set; }
         public IEnumerable<Categoria> categorias { get; set; }
@@ -28,9 +28,9 @@ namespace SoccerManager.App.Persistencia
         public IEnumerable<Equipo> equipos { get; set; }
         public IEnumerable<Jugador> jugadores { get; set; }
         public IEnumerable<Partido_Jugador> partido_Jugadores { get; set; }
-=======
+
         public IEnumerable<Cancha> canchas { get; set; }
->>>>>>> Stashed changes
+
 
         public Repositorios(AppContext appContext)
         {

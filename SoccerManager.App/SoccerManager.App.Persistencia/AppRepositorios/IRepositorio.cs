@@ -81,7 +81,7 @@ namespace SoccerManager.App.Persistencia
 
         Perfil GetPerfil(int? IdPerfil);
         //========================================================================================
-<<<<<<< Updated upstream
+
         //CRUD Rama
 
         IEnumerable<Rama> GetAllRamas(string? Nombre);
@@ -210,7 +210,7 @@ namespace SoccerManager.App.Persistencia
 
 
 
-=======
+
         //========================================================================================
         //CRUD Canchas
 
@@ -224,6 +224,6 @@ namespace SoccerManager.App.Persistencia
 
         Cancha GetCancha(int? IdCancha);
         //========================================================================================
->>>>>>> Stashed changes
+
     }
 }
