@@ -212,3 +212,7 @@ C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager
 C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\SoccerManager.App.Presentacion.dll
 C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\SoccerManager.App.Presentacion.pdb
 C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\SoccerManager.App.Presentacion.genruntimeconfig.cache
+C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Ramas\List.cshtml.g.cs
+C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Ramas\Details.cshtml.g.cs
+C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Ramas\Edit.cshtml.g.cs
+C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Ramas\Delete.cshtml.g.cs
