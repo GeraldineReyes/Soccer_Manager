@@ -10,8 +10,8 @@ using SoccerManager.App.Persistencia;
 namespace SoccerManager.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20211016201906_Combobox")]
-    partial class Combobox
+    [Migration("20211016222332_Cancha")]
+    partial class Cancha
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -40,6 +40,39 @@ namespace SoccerManager.App.Persistencia.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Campos");
+                });
+
+            modelBuilder.Entity("SoccerManager.App.Dominio.Cancha", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int>("Campo")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Cantidad_Canchas")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Contacto")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Direccion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nombre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Telefono")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Canchas");
                 });
 
             modelBuilder.Entity("SoccerManager.App.Dominio.Ciudad", b =>

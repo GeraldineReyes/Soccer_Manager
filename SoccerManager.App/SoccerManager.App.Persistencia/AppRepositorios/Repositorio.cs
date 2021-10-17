@@ -17,6 +17,7 @@ namespace SoccerManager.App.Persistencia
         public IEnumerable<Genero> generos { get; set; }
         public IEnumerable<Ciudad> ciudades { get; set; }
         public IEnumerable<Perfil> perfiles { get; set; }
+
         public IEnumerable<Rama> ramas { get; set; }
         public IEnumerable<Modalidad> modalidades { get; set; }
         public IEnumerable<Categoria> categorias { get; set; }
@@ -27,6 +28,9 @@ namespace SoccerManager.App.Persistencia
         public IEnumerable<Equipo> equipos { get; set; }
         public IEnumerable<Jugador> jugadores { get; set; }
         public IEnumerable<Partido_Jugador> partido_Jugadores { get; set; }
+
+        public IEnumerable<Cancha> canchas { get; set; }
+
 
         public Repositorios(AppContext appContext)
         {
@@ -368,6 +372,66 @@ namespace SoccerManager.App.Persistencia
             if (PerfilEncontrado == null)
                 return;
             _appContext.Perfiles.Remove(PerfilEncontrado);
+            _appContext.SaveChanges();
+        }
+        //===============================================================================================
+        //CRUD Cancha
+        Cancha IRepositorios.AddCancha(Cancha cancha)
+        {
+            try
+            {
+                var CanchaAdicionado = _appContext.Canchas.Add(cancha);  //INSERT en la BD
+                _appContext.SaveChanges();
+                return CanchaAdicionado.Entity;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        IEnumerable<Cancha> IRepositorios.GetAllCanchas(string? Nombre)
+        {
+            if (Nombre != null)
+            {
+                canchas = _appContext.Canchas.Where(p => p.Nombre.Contains(Nombre)); //like sobre la tabla
+            }
+            else
+                canchas = _appContext.Canchas;  //select * from tutor
+            return canchas;
+        }
+
+        Cancha IRepositorios.GetCancha(int? IdCancha)
+        {
+            return _appContext.Canchas.FirstOrDefault(p => p.Id == IdCancha);
+        }
+
+        Cancha IRepositorios.UpdateCancha(Cancha cancha)
+        {
+            var CanchaEncontrado = _appContext.Canchas.FirstOrDefault(p => p.Id == cancha.Id);
+            if (CanchaEncontrado != null)
+            {
+
+                CanchaEncontrado.Nombre = cancha.Nombre;
+                CanchaEncontrado.Cantidad_Canchas = cancha.Cantidad_Canchas;
+                CanchaEncontrado.Direccion = cancha.Direccion;
+                CanchaEncontrado.Telefono = cancha.Telefono;
+                CanchaEncontrado.Email = cancha.Email;
+                CanchaEncontrado.Contacto = cancha.Contacto;
+                CanchaEncontrado.Campo = cancha.Campo;
+
+
+                _appContext.SaveChanges();
+            }
+            return CanchaEncontrado;
+        }
+
+        void IRepositorios.DeleteCancha(int IdCancha)
+        {
+            var CanchaEncontrado = _appContext.Canchas.FirstOrDefault(p => p.Id == IdCancha);
+            if (CanchaEncontrado == null)
+                return;
+            _appContext.Canchas.Remove(CanchaEncontrado);
             _appContext.SaveChanges();
         }
 

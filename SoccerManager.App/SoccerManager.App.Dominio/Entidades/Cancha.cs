@@ -11,6 +11,6 @@ namespace SoccerManager.App.Dominio
         public string Email { get; set; }
         public string Contacto { get; set; }
 
-        public Campo campo { get; set; }           
+        public int Campo { get; set; }           
     }
 }
