@@ -105,6 +105,7 @@ C:\SoccerManager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netc
 C:\SoccerManager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Perfiles\Details.cshtml.g.cs
 C:\SoccerManager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Perfiles\Edit.cshtml.g.cs
 C:\SoccerManager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Perfiles\List.cshtml.g.cs
+<<<<<<< Updated upstream
 C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Presentacion\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Presentacion\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Presentacion\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -216,3 +217,9 @@ C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager
 C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Ramas\Details.cshtml.g.cs
 C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Ramas\Edit.cshtml.g.cs
 C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Ramas\Delete.cshtml.g.cs
+=======
+C:\SoccerManager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Canchas\Delete.cshtml.g.cs
+C:\SoccerManager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Canchas\Details.cshtml.g.cs
+C:\SoccerManager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Canchas\Edit.cshtml.g.cs
+C:\SoccerManager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Canchas\List.cshtml.g.cs
+>>>>>>> Stashed changes
