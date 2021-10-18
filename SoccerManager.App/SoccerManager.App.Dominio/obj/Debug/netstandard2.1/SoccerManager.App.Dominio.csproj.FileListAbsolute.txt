@@ -25,3 +25,12 @@ C:\Users\Familia\Documents\GitHub\Nueva carpeta\Soccer_Manager4\SoccerManager.Ap
 C:\Users\Familia\Documents\GitHub\Nueva carpeta\Soccer_Manager4\SoccerManager.App\SoccerManager.App.Dominio\obj\Debug\netstandard2.1\SoccerManager.App.Dominio.csproj.CoreCompileInputs.cache
 C:\Users\Familia\Documents\GitHub\Nueva carpeta\Soccer_Manager4\SoccerManager.App\SoccerManager.App.Dominio\obj\Debug\netstandard2.1\SoccerManager.App.Dominio.dll
 C:\Users\Familia\Documents\GitHub\Nueva carpeta\Soccer_Manager4\SoccerManager.App\SoccerManager.App.Dominio\obj\Debug\netstandard2.1\SoccerManager.App.Dominio.pdb
+C:\Users\reyesgea\Documents\GitHub\SoccerManager\SoccerManager.App\SoccerManager.App.Dominio\bin\Debug\netstandard2.1\SoccerManager.App.Dominio.deps.json
+C:\Users\reyesgea\Documents\GitHub\SoccerManager\SoccerManager.App\SoccerManager.App.Dominio\bin\Debug\netstandard2.1\SoccerManager.App.Dominio.dll
+C:\Users\reyesgea\Documents\GitHub\SoccerManager\SoccerManager.App\SoccerManager.App.Dominio\bin\Debug\netstandard2.1\SoccerManager.App.Dominio.pdb
+C:\Users\reyesgea\Documents\GitHub\SoccerManager\SoccerManager.App\SoccerManager.App.Dominio\obj\Debug\netstandard2.1\SoccerManager.App.Dominio.csprojAssemblyReference.cache
+C:\Users\reyesgea\Documents\GitHub\SoccerManager\SoccerManager.App\SoccerManager.App.Dominio\obj\Debug\netstandard2.1\SoccerManager.App.Dominio.AssemblyInfoInputs.cache
+C:\Users\reyesgea\Documents\GitHub\SoccerManager\SoccerManager.App\SoccerManager.App.Dominio\obj\Debug\netstandard2.1\SoccerManager.App.Dominio.AssemblyInfo.cs
+C:\Users\reyesgea\Documents\GitHub\SoccerManager\SoccerManager.App\SoccerManager.App.Dominio\obj\Debug\netstandard2.1\SoccerManager.App.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\reyesgea\Documents\GitHub\SoccerManager\SoccerManager.App\SoccerManager.App.Dominio\obj\Debug\netstandard2.1\SoccerManager.App.Dominio.dll
+C:\Users\reyesgea\Documents\GitHub\SoccerManager\SoccerManager.App\SoccerManager.App.Dominio\obj\Debug\netstandard2.1\SoccerManager.App.Dominio.pdb
