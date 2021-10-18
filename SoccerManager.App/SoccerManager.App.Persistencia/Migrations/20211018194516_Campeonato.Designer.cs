@@ -10,8 +10,8 @@ using SoccerManager.App.Persistencia;
 namespace SoccerManager.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20211017010126_Inicial3")]
-    partial class Inicial3
+    [Migration("20211018194516_Campeonato")]
+    partial class Campeonato
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -135,6 +135,9 @@ namespace SoccerManager.App.Persistencia.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<int>("Campo")
+                        .HasColumnType("int");
+
                     b.Property<int>("Cantidad_Canchas")
                         .HasColumnType("int");
 
@@ -153,14 +156,9 @@ namespace SoccerManager.App.Persistencia.Migrations
                     b.Property<string>("Telefono")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("campoId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("campoId");
-
-                    b.ToTable("Cancha");
+                    b.ToTable("Canchas");
                 });
 
             modelBuilder.Entity("SoccerManager.App.Dominio.Categoria", b =>
@@ -589,15 +587,6 @@ namespace SoccerManager.App.Persistencia.Migrations
                     b.Navigation("modalidad");
 
                     b.Navigation("rama");
-                });
-
-            modelBuilder.Entity("SoccerManager.App.Dominio.Cancha", b =>
-                {
-                    b.HasOne("SoccerManager.App.Dominio.Campo", "campo")
-                        .WithMany()
-                        .HasForeignKey("campoId");
-
-                    b.Navigation("campo");
                 });
 
             modelBuilder.Entity("SoccerManager.App.Dominio.Equipo", b =>
