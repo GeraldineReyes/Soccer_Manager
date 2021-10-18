@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "x+UvalImW+lNBrp3JjFF4bUR2eZO81+EXHCJVzdgOdTqZdBJ5yucc4Xs04Um7y7BISLQ6s1sbJLTIxrXf6hmew==",
+  "dgSpecHash": "/8ZWMLyve6apHyyazKnlIaP+33ItyAnaCX/6XAxMHpMqsYeCjadJRUiGpvU0j1IXx3FOzsdIJCXp9Oh2d1qE5A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Familia\\Documents\\GitHub\\Nueva carpeta\\Soccer_Manager4\\SoccerManager.App\\SoccerManager.App.Persistencia\\SoccerManager.App.Persistencia.csproj",
+  "projectFilePath": "C:\\Users\\Familia\\Documents\\GitHub\\Soccer_Manager\\SoccerManager.App\\SoccerManager.App.Persistencia\\SoccerManager.App.Persistencia.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Familia\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Familia\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

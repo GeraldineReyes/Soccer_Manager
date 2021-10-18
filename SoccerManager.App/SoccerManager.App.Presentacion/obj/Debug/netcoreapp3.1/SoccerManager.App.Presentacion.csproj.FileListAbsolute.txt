@@ -355,3 +355,10 @@ C:\Users\Familia\Documents\GitHub\Nueva carpeta\Soccer_Manager4\SoccerManager.Ap
 C:\Users\Familia\Documents\GitHub\Nueva carpeta\Soccer_Manager4\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Campeonatos\Details.cshtml.g.cs
 C:\Users\Familia\Documents\GitHub\Nueva carpeta\Soccer_Manager4\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Campeonatos\Edit.cshtml.g.cs
 C:\Users\Familia\Documents\GitHub\Nueva carpeta\Soccer_Manager4\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Campeonatos\List.cshtml.g.cs
+C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Campeonatos\Details.cshtml.g.cs
+C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Campeonatos\Edit.cshtml.g.cs
+C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Campeonatos\List.cshtml.g.cs
+C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Modalidades\Delete.cshtml.g.cs
+C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Modalidades\Details.cshtml.g.cs
+C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Modalidades\Edit.cshtml.g.cs
+C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Modalidades\List.cshtml.g.cs

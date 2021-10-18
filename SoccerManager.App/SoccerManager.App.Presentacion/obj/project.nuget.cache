@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oZdTWaQmyylYPVmueAcnNtGdHwtf8x44ZXG0H/4QoI4mfmjeKJPa/phjaHgIqGpOpyGeDFo4Kw6CjroYLnVrKA==",
+  "dgSpecHash": "3rWuxtE3IuKey+sFnB3KdS9Xe/IZX+7CQEFmGSmCxLECpoY2/fowrHJYhXYmRTmEKi9ttxowcH4FBwU++Z63FA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Familia\\Documents\\GitHub\\Nueva carpeta\\Soccer_Manager4\\SoccerManager.App\\SoccerManager.App.Presentacion\\SoccerManager.App.Presentacion.csproj",
+  "projectFilePath": "C:\\Users\\Familia\\Documents\\GitHub\\Soccer_Manager\\SoccerManager.App\\SoccerManager.App.Presentacion\\SoccerManager.App.Presentacion.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Familia\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Familia\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
