@@ -914,16 +914,16 @@ namespace SoccerManager.App.Persistencia
             }
         }
 
-//          IEnumerable<Jugador> IRepositorios.GetAllJugadores(string? Nombre)
-//          {
-//              if (Nombre != null)
-//              {
-//                  jugadores = _appContext.Jugadores.Where(p => p.Nombre.Contains(Nombre)); //like sobre la tabla
-//              }
-//              else
-//                  jugadores = _appContext.Jugadores;  //select * from tutor
-//              return jugadores;
-//          }
+        IEnumerable<Jugador> IRepositorios.GetAllJugadores(string? Peso)
+          {
+             if (Peso != null)
+             {
+                 jugadores = _appContext.Jugadores.Where(p => p.Peso.Contains(Peso)); //like sobre la tabla
+              }
+              else
+                  jugadores = _appContext.Jugadores;  //select * from tutor
+              return jugadores;
+         }
 
        Jugador IRepositorios.GetJugador(int? IdJugador)
         {

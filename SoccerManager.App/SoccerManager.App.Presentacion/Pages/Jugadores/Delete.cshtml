@@ -1,0 +1,37 @@
+﻿@page
+@model SoccerManager.App.Presentacion.DeleteJugadorModel
+@{
+    int jugadorId = Model.jugador.Id;
+}
+
+<h2><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil"
+        viewBox="0 0 16 16">
+        <path
+            d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+    </svg>Eliminar Jugador
+</h2>
+<form method="post">
+    <input type="hidden" asp-for="jugador.Id" />
+    <div class="form-group">
+        <label asp-for="jugador.Altura"></label>
+        <input asp-for="jugador.Altura" class="form-control"disabled>
+        <span class="text-danger" asp-validation-for="jugador.Altura"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="jugador.Peso"></label>
+        <input asp-for="jugador.Peso" class="form-control"disabled>
+        <span class="text-danger" asp-validation-for="jugador.Peso"></span>
+    </div>
+           
+           
+
+    <button type="submit" class="btn btn-danger"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+            fill="currentColor" class="bi bi-person-x-fill" viewBox="0 0 18 18">
+            <path fill-rule="evenodd"
+                d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6.146-2.854a.5.5 0 0 1 .708 0L14 6.293l1.146-1.147a.5.5 0 0 1 .708.708L14.707 7l1.147 1.146a.5.5 0 0 1-.708.708L14 7.707l-1.146 1.147a.5.5 0 0 1-.708-.708L13.293 7l-1.147-1.146a.5.5 0 0 1 0-.708z" />
+        </svg>Eliminar jugador</button>
+</form>
+
+<a asp-page="./List" class="btn-default"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-reply-fill" viewBox="0 0 16 16">
+  <path d="M5.921 11.9 1.353 8.62a.719.719 0 0 1 0-1.238L5.921 4.1A.716.716 0 0 1 7 4.719V6c1.5 0 6 0 7 8-2.5-4.5-7-4-7-4v1.281c0 .56-.606.898-1.079.62z"/>
+</svg>Cancelar </a>
