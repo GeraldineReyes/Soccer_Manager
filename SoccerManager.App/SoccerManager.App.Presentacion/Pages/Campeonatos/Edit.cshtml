@@ -1,0 +1,97 @@
+﻿@page
+@model SoccerManager.App.Presentacion.EditCampeonatoModel
+@{
+    int campeonatoId = Model.campeonato.Id;
+    //int arbitroId = Model.campeonato.arbitro;
+    //int canchaId  = Model.campeonato.Cancha;
+   // int categoriaId = Model.campeonato.categoria;
+    //int modalidadId = Model.campeonato.modalidad;
+   // int ramasId = Model.campeonato.rama;
+    //int equipoId = Model.campeonato.equipo;
+}
+
+<h2><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+        class="bi bi-trophy" viewBox="0 0 16 16">
+        <path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5c0 .538-.012 1.05-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33.076 33.076 0 0 1 2.5.5zm.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935zm10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935zM3.504 1c.007.517.026 1.006.056 1.469.13 2.028.457 3.546.87 4.667C5.294 9.48 6.484 10 7 10a.5.5 0 0 1 .5.5v2.61a1 1 0 0 1-.757.97l-1.426.356a.5.5 0 0 0-.179.085L4.5 15h7l-.638-.479a.501.501 0 0 0-.18-.085l-1.425-.356a1 1 0 0 1-.757-.97V10.5A.5.5 0 0 1 9 10c.516 0 1.706-.52 2.57-2.864.413-1.12.74-2.64.87-4.667.03-.463.049-.952.056-1.469H3.504z" />
+         </svg>Editar Campeonato   
+</h2>
+<form method="post">
+  <input type="hidden" asp-for="campeonato.Id" />
+ 
+@{//
+// <div class="form-group">
+//        <label asp-for="campeonato.cancha"></label>
+
+//        <select class="form-select" name="campeonato.cancha">
+//            <option selected  value=0>Seleccionar opcion</option>
+//            @foreach(var elemento in Model.canchas){
+//               if (elemento.Id == canchaId) {
+//                  <option value="@elemento.Id" selected> @elemento.Nombre</option> 
+//                }
+//               else {
+//                  <option value="@elemento.Id"> @elemento.Nombre </option>
+//               }
+//            }
+//        </select>
+//        <span class="text-danger" asp-validation-for="campeonato.cancha"></span>
+//    </div> 
+}
+
+
+    
+    <div class="form-group">
+        <label asp-for="campeonato.Nombre"></label>
+        <input asp-for="campeonato.Nombre" class="form-control">
+        <span class="text-danger" asp-validation-for="campeonato.Nombre"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="campeonato.Fecha_Inicial"></label>
+        <input asp-for="campeonato.Fecha_Inicial" class="form-control">
+        <span class="text-danger" asp-validation-for="campeonato.Fecha_Inicial"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="campeonato.Fecha_Fin "></label>
+        <input asp-for="campeonato.Fecha_Fin " class="form-control">
+        <span class="text-danger" asp-validation-for="campeonato.Fecha_Fin "></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="campeonato.Reglamento"></label>
+        <input asp-for="campeonato.Reglamento" class="form-control">
+        <span class="text-danger" asp-validation-for="campeonato.Reglamento"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="campeonato.Numero_Eliminatorias "></label>
+        <input asp-for="campeonato.Numero_Eliminatorias " class="form-control">
+        <span class="text-danger" asp-validation-for="campeonato.Numero_Eliminatorias"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="campeonato.Numero_Equipos_Premiados"></label>
+        <input asp-for="campeonato.Numero_Equipos_Premiados" class="form-control">
+        <span class="text-danger" asp-validation-for="campeonato.Numero_Equipos_Premiados"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="campeonato.Estado "></label>
+        <input asp-for="campeonato.Estado " class="form-control">
+        <span class="text-danger" asp-validation-for="campeonato.Estado "></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="campeonato.Numero_Equipos"></label>
+        <input asp-for="campeonato.Numero_Equipos" class="form-control">
+        <span class="text-danger" asp-validation-for="campeonato.Numero_Equipos"></span>
+    </div>
+
+
+
+
+
+    <button type="submit" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+</svg>Guardar</button>
+<!--/*TO DO: Investigar como volver a listar al dar Guardar*/    -->
+</form>
+
+<a asp-page="./List" class="btn-default"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-reply-fill" viewBox="0 0 16 16">
+  <path d="M5.921 11.9 1.353 8.62a.719.719 0 0 1 0-1.238L5.921 4.1A.716.716 0 0 1 7 4.719V6c1.5 0 6 0 7 8-2.5-4.5-7-4-7-4v1.281c0 .56-.606.898-1.079.62z"/>
+</svg>Cancelar </a>
+

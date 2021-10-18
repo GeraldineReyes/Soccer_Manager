@@ -7268,11 +7268,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Familia\\Documents\\GitHub\\Soccer_Manager\\SoccerManager.App\\SoccerManager.App.Persistencia\\SoccerManager.App.Persistencia.csproj",
+      "projectUniqueName": "C:\\Users\\Familia\\Documents\\GitHub\\Nueva carpeta\\Soccer_Manager4\\SoccerManager.App\\SoccerManager.App.Persistencia\\SoccerManager.App.Persistencia.csproj",
       "projectName": "SoccerManager.App.Persistencia",
-      "projectPath": "C:\\Users\\Familia\\Documents\\GitHub\\Soccer_Manager\\SoccerManager.App\\SoccerManager.App.Persistencia\\SoccerManager.App.Persistencia.csproj",
+      "projectPath": "C:\\Users\\Familia\\Documents\\GitHub\\Nueva carpeta\\Soccer_Manager4\\SoccerManager.App\\SoccerManager.App.Persistencia\\SoccerManager.App.Persistencia.csproj",
       "packagesPath": "C:\\Users\\Familia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Familia\\Documents\\GitHub\\Soccer_Manager\\SoccerManager.App\\SoccerManager.App.Persistencia\\obj\\",
+      "outputPath": "C:\\Users\\Familia\\Documents\\GitHub\\Nueva carpeta\\Soccer_Manager4\\SoccerManager.App\\SoccerManager.App.Persistencia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Familia\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -7286,8 +7286,8 @@
       "frameworks": {
         "netstandard2.1": {
           "projectReferences": {
-            "C:\\Users\\Familia\\Documents\\GitHub\\Soccer_Manager\\SoccerManager.App\\SoccerManager.App.Dominio\\SoccerManager.App.Dominio.csproj": {
-              "projectPath": "C:\\Users\\Familia\\Documents\\GitHub\\Soccer_Manager\\SoccerManager.App\\SoccerManager.App.Dominio\\SoccerManager.App.Dominio.csproj"
+            "C:\\Users\\Familia\\Documents\\GitHub\\Nueva carpeta\\Soccer_Manager4\\SoccerManager.App\\SoccerManager.App.Dominio\\SoccerManager.App.Dominio.csproj": {
+              "projectPath": "C:\\Users\\Familia\\Documents\\GitHub\\Nueva carpeta\\Soccer_Manager4\\SoccerManager.App\\SoccerManager.App.Dominio\\SoccerManager.App.Dominio.csproj"
             }
           }
         }

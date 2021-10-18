@@ -16,3 +16,12 @@ C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager
 C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Dominio\obj\Debug\netstandard2.1\SoccerManager.App.Dominio.csproj.CoreCompileInputs.cache
 C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Dominio\obj\Debug\netstandard2.1\SoccerManager.App.Dominio.dll
 C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Dominio\obj\Debug\netstandard2.1\SoccerManager.App.Dominio.pdb
+C:\Users\Familia\Documents\GitHub\Nueva carpeta\Soccer_Manager4\SoccerManager.App\SoccerManager.App.Dominio\bin\Debug\netstandard2.1\SoccerManager.App.Dominio.deps.json
+C:\Users\Familia\Documents\GitHub\Nueva carpeta\Soccer_Manager4\SoccerManager.App\SoccerManager.App.Dominio\bin\Debug\netstandard2.1\SoccerManager.App.Dominio.dll
+C:\Users\Familia\Documents\GitHub\Nueva carpeta\Soccer_Manager4\SoccerManager.App\SoccerManager.App.Dominio\bin\Debug\netstandard2.1\SoccerManager.App.Dominio.pdb
+C:\Users\Familia\Documents\GitHub\Nueva carpeta\Soccer_Manager4\SoccerManager.App\SoccerManager.App.Dominio\obj\Debug\netstandard2.1\SoccerManager.App.Dominio.csprojAssemblyReference.cache
+C:\Users\Familia\Documents\GitHub\Nueva carpeta\Soccer_Manager4\SoccerManager.App\SoccerManager.App.Dominio\obj\Debug\netstandard2.1\SoccerManager.App.Dominio.AssemblyInfoInputs.cache
+C:\Users\Familia\Documents\GitHub\Nueva carpeta\Soccer_Manager4\SoccerManager.App\SoccerManager.App.Dominio\obj\Debug\netstandard2.1\SoccerManager.App.Dominio.AssemblyInfo.cs
+C:\Users\Familia\Documents\GitHub\Nueva carpeta\Soccer_Manager4\SoccerManager.App\SoccerManager.App.Dominio\obj\Debug\netstandard2.1\SoccerManager.App.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Familia\Documents\GitHub\Nueva carpeta\Soccer_Manager4\SoccerManager.App\SoccerManager.App.Dominio\obj\Debug\netstandard2.1\SoccerManager.App.Dominio.dll
+C:\Users\Familia\Documents\GitHub\Nueva carpeta\Soccer_Manager4\SoccerManager.App\SoccerManager.App.Dominio\obj\Debug\netstandard2.1\SoccerManager.App.Dominio.pdb

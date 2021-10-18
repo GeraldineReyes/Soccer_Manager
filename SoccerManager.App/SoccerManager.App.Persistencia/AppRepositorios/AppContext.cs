@@ -24,6 +24,7 @@ namespace SoccerManager.App.Persistencia
         public DbSet<Equipo> Equipos { get; set; }
         public DbSet<Jugador> Jugadores { get; set; }
         public DbSet<Partido_Jugador> Partido_Jugadores { get; set; }
+        
 
         public DbSet<Cancha> Canchas { get; set; }
 
