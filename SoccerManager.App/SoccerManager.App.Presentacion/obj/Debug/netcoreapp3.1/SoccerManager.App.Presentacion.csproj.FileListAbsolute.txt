@@ -362,3 +362,7 @@ C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager
 C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Modalidades\Details.cshtml.g.cs
 C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Modalidades\Edit.cshtml.g.cs
 C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Modalidades\List.cshtml.g.cs
+C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Jugadores\Delete.cshtml.g.cs
+C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Jugadores\Details.cshtml.g.cs
+C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Jugadores\Edit.cshtml.g.cs
+C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Jugadores\List.cshtml.g.cs

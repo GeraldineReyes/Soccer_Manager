@@ -184,7 +184,7 @@ namespace SoccerManager.App.Persistencia
 
         //CRUD Jugador
 
-//        IEnumerable<Jugador> GetAllJugadores(string? Nombre);
+        IEnumerable<Jugador> GetAllJugadores(string? Nombre);
 
         Jugador AddJugador(Jugador jugador);
 
