@@ -11,8 +11,8 @@ namespace SoccerManager.App.Dominio
         public string Posicion { get; set; }
         public string Abreviatura_Posicion { get; set; }
 
-        public Equipo equipo { get; set; }
-        public Jugador jugador { get; set;}
+        public int Equipo  { get; set; }
+        public int Jugador  { get; set;}
 
     }
 }

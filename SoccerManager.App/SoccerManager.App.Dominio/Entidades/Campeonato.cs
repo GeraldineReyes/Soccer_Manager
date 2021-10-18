@@ -14,11 +14,11 @@ namespace SoccerManager.App.Dominio
         public string Estado { get; set;}
         public int Numero_Equipos { get; set;}
 
-        public Arbitro arbitro { get; set; }
-        public Cancha cancha { get; set; }
-        public Categoria categoria { get; set; }
-        public Modalidad modalidad { get; set; }
-        public Rama rama { get; set; }
-        public Equipo equipo { get; set; }
+        public int Arbitro  { get; set; }
+        public int Cancha  { get; set; }
+        public int Categoria  { get; set; }
+        public int Modalidad  { get; set; }
+        public int Rama  { get; set; }
+        public int Equipo  { get; set; }
     }
 }

@@ -6,7 +6,7 @@ namespace SoccerManager.App.Dominio
         public int Id { get; set; }        
         public string Certificado { get;set;}        
         
-        public Persona persona { get; set; }
+        public int Persona  { get; set; }
 
     }
 }

@@ -6,7 +6,7 @@ namespace SoccerManager.App.Dominio
        public int Id { get; set; }
        public int Valor_Inscripcion { get; set; }
 
-       public Campeonato campeonato { get; set; }
-       public Equipo equipo { get; set; }
+       public int Campeonato  { get; set; }
+       public int Equipo  { get; set; }
     }
 }
