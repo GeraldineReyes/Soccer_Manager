@@ -497,3 +497,4 @@ C:\Users\reyesgea\Documents\GitHub\SoccerManager\SoccerManager.App\SoccerManager
 C:\Users\reyesgea\Documents\GitHub\SoccerManager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\SoccerManager.App.Presentacion.dll
 C:\Users\reyesgea\Documents\GitHub\SoccerManager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\SoccerManager.App.Presentacion.pdb
 C:\Users\reyesgea\Documents\GitHub\SoccerManager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\SoccerManager.App.Presentacion.genruntimeconfig.cache
+C:\Users\Familia\Documents\GitHub\Soccer_Manager\SoccerManager.App\SoccerManager.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\List.cshtml.g.cs
