@@ -13,11 +13,11 @@ namespace SoccerManager.App.Dominio
         public string Telefono {get; set; }
         public string Email {get; set; }
 
-        public int Categoria  { get; set; }
-        public int Modalidad  { get; set; }
-        public int Rama  { get; set;}
-        public int Ciudad  { get; set; }
-        public int Jugador  { get; set; } 
+        public  Categoria categoria { get; set; }
+        public  Modalidad  modalidad { get; set; }
+        public  Rama rama { get; set;}
+        public  Ciudad ciudad { get; set; }
+        public  Jugador jugador { get; set; } 
         
     }
 }

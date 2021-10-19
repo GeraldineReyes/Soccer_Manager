@@ -9,9 +9,9 @@ namespace SoccerManager.App.Dominio
         public DateTime Fecha { get; set; }
         public DateTime Hora { get; set; }
 
-        public int Equipo  { get; set; }
-        public int Partido  { get; set; }
-        public int Campo  { get; set; }
+        public  Equipo equipo  { get; set; }
+        public  Partido partido { get; set; }
+        public  Campo campo { get; set; }
 
     }
 }
