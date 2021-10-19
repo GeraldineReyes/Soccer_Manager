@@ -44,18 +44,6 @@ namespace SoccerManager.App.Persistencia.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int>("Arbitro")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Cancha")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Categoria")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Equipo")
-                        .HasColumnType("int");
-
                     b.Property<string>("Estado")
                         .HasColumnType("nvarchar(max)");
 
@@ -64,9 +52,6 @@ namespace SoccerManager.App.Persistencia.Migrations
 
                     b.Property<DateTime>("Fecha_Inicial")
                         .HasColumnType("datetime2");
-
-                    b.Property<int>("Modalidad")
-                        .HasColumnType("int");
 
                     b.Property<string>("Nombre")
                         .HasColumnType("nvarchar(max)");
@@ -80,13 +65,40 @@ namespace SoccerManager.App.Persistencia.Migrations
                     b.Property<int>("Numero_Equipos_Premiados")
                         .HasColumnType("int");
 
-                    b.Property<int>("Rama")
-                        .HasColumnType("int");
-
                     b.Property<string>("Reglamento")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("arbitroId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("canchaId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("categoriaId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("equipoId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("modalidadId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ramaId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("arbitroId");
+
+                    b.HasIndex("canchaId");
+
+                    b.HasIndex("categoriaId");
+
+                    b.HasIndex("equipoId");
+
+                    b.HasIndex("modalidadId");
+
+                    b.HasIndex("ramaId");
 
                     b.ToTable("Campeonatos");
                 });
@@ -314,16 +326,20 @@ namespace SoccerManager.App.Persistencia.Migrations
                     b.Property<string>("Altura")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Campeonato")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Persona")
-                        .HasColumnType("int");
-
                     b.Property<string>("Peso")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("campeonatoId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("personaId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("campeonatoId");
+
+                    b.HasIndex("personaId");
 
                     b.ToTable("Jugadores");
                 });
@@ -470,6 +486,60 @@ namespace SoccerManager.App.Persistencia.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Tipos_Documentos");
+                });
+
+            modelBuilder.Entity("SoccerManager.App.Dominio.Campeonato", b =>
+                {
+                    b.HasOne("SoccerManager.App.Dominio.Arbitro", "arbitro")
+                        .WithMany()
+                        .HasForeignKey("arbitroId");
+
+                    b.HasOne("SoccerManager.App.Dominio.Cancha", "cancha")
+                        .WithMany()
+                        .HasForeignKey("canchaId");
+
+                    b.HasOne("SoccerManager.App.Dominio.Categoria", "categoria")
+                        .WithMany()
+                        .HasForeignKey("categoriaId");
+
+                    b.HasOne("SoccerManager.App.Dominio.Equipo", "equipo")
+                        .WithMany()
+                        .HasForeignKey("equipoId");
+
+                    b.HasOne("SoccerManager.App.Dominio.Modalidad", "modalidad")
+                        .WithMany()
+                        .HasForeignKey("modalidadId");
+
+                    b.HasOne("SoccerManager.App.Dominio.Rama", "rama")
+                        .WithMany()
+                        .HasForeignKey("ramaId");
+
+                    b.Navigation("arbitro");
+
+                    b.Navigation("cancha");
+
+                    b.Navigation("categoria");
+
+                    b.Navigation("equipo");
+
+                    b.Navigation("modalidad");
+
+                    b.Navigation("rama");
+                });
+
+            modelBuilder.Entity("SoccerManager.App.Dominio.Jugador", b =>
+                {
+                    b.HasOne("SoccerManager.App.Dominio.Campeonato", "campeonato")
+                        .WithMany()
+                        .HasForeignKey("campeonatoId");
+
+                    b.HasOne("SoccerManager.App.Dominio.Persona", "persona")
+                        .WithMany()
+                        .HasForeignKey("personaId");
+
+                    b.Navigation("campeonato");
+
+                    b.Navigation("persona");
                 });
 #pragma warning restore 612, 618
         }

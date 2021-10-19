@@ -35,35 +35,16 @@
             <h5>Nombre</h5>
         </th>
         <th>
-            <h5>Fecha_Inicial</h5>
+            <h5>Fecha Inicial</h5>
         </th>
         <th>
-            <h5>Fecha_Fin</h5>
+            <h5>Fecha Final</h5>
         </th>
-        <th>
-            <h5>Reglamento</h5>
-        </th>
-        <th>
-            <h5>Numero_Eliminatorias</h5>
-        </th>
-        <th>
-            <h5>Numero_Equipos_Premiados</h5>
-        </th>
+        
         <th>
             <h5>Estado </h5>
         </th>
-        <th>
-            <h5>Numero_Equipos </h5>
-        </th>
-        <th>
-            <h5>Categoria </h5>
-        </th>
-        <th>
-            <h5>Modalidad</h5>
-        </th>
-        <th>
-            <h5>Rama</h5>
-        </th>
+        
 
     </tr>
     @foreach (var campeonato in Model.campeonatos)
@@ -72,15 +53,8 @@
             <td>@campeonato.Id</td>
             <td>@campeonato.Nombre</td>
             <td>@campeonato.Fecha_Inicial</td>
-            <td>@campeonato.Fecha_Fin</td>
-            <td>@campeonato.Reglamento</td>
-            <td>@campeonato.Numero_Eliminatorias</td>
-            <td>@campeonato.Numero_Equipos_Premiados</td>
+            <td>@campeonato.Fecha_Fin</td>            
             <td>@campeonato.Estado</td>
-            <td>@campeonato.Numero_Equipos</td>
-            <td>@campeonato.categoria</td>
-            <td>@campeonato.modalidad</td>
-            <td>@campeonato.rama</td>
             <td>
                 <a class="btn btn-primary table-btn" asp-page="./Details" asp-route-campeonatoId="@campeonato.Id">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-receipt"
