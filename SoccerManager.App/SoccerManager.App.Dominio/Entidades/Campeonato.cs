@@ -15,7 +15,7 @@ namespace SoccerManager.App.Dominio
         public int Numero_Equipos { get; set;}
 
         public  Arbitro arbitro  { get; set; }
-        public  Cancha cancha  { get; set; }
+        public  Cancha  cancha { get; set; }
         public  Categoria categoria  { get; set; }
         public  Modalidad  modalidad { get; set; }
         public  Rama rama { get; set; }

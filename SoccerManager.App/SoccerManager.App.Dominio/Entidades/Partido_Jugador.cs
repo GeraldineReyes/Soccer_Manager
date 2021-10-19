@@ -13,8 +13,8 @@ namespace SoccerManager.App.Dominio
         public DateTime Minuto { get; set; }
 
 
-        public int Partido  { get; set; }
-        public int Jugador  { get; set; }
+        public  Partido partido { get; set; }
+        public  Jugador jugador { get; set; }
 
 
     }

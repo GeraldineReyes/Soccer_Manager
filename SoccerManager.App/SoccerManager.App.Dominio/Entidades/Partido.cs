@@ -6,8 +6,8 @@ namespace SoccerManager.App.Dominio
         public int Id { get; set; }        
         public string Estado { get; set;}
 
-        public int Equipo  { get; set; }
-        public int Arbitro  { get; set;}
+        public  Equipo equipo { get; set; }
+        public  Arbitro  arbitro { get; set;}
         
     }
 }
